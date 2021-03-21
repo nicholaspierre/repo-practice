@@ -1,10 +1,32 @@
 body {
     background-color: aqua;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    max-width: 500px;
+    margin: auto;
+  }
+
+.intro {
+    background-color: yellow;
+}
+
+#helloMyNameIs {
+    position: absolute
+}
+
+#sonNatahnPhoto {
+    position: absolute;
+    margin-top: 100px;
 }
 
 p {
     font-size: 30px;
     color: blue;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 h1 {
@@ -23,7 +45,8 @@ li {
 
 a {
     color: purple;
-}
+    display: block;
+  }
 
 #fname
 {
@@ -35,8 +58,76 @@ a {
     color:blue;
 }
 
+#message
+{
+    color:darkgreen;
+}
+
+table {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+input {
+    width: 100%;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#sayHelloOrWhatever {
+    font-style: italic;
+}
+
+#sayHello {
+    font-weight: bold;
+}
+
 #Lorem
 {
     color:coral;
     font-family: 'Courier New', Courier, monospace;
+}
+
+#biophoto {
+    position: absolute;
+    left: 100px;
+    top: 150px;
+  }
+
+
+.stage {
+    display: flex;
+    height: 330px;
+    width: 100%;
+}
+.box {
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    height: 100%;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+    width: 500px;
+}
+.bounce-4 {
+    animation-name: bounce-4;
+    animation-timing-function: ease;
+}
+@keyframes bounce-4 {
+    0%   { transform: scale(1,1)    translateY(0); }
+    10%  { transform: scale(1.1,.7) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(-100px); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
 }
