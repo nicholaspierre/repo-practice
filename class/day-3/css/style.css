@@ -16,6 +16,7 @@
     display: flex;
     border: solid;
     flex-direction: row; /* row is the default */
+    width: 80vw;
 /*    justify-content:space-around; */
 /*    flex-direction: row-reverse;
     flex-wrap: wrap; */
@@ -41,7 +42,7 @@
     justify-content:space-around;
     flex-direction:column;
     align-items:stretch;
-    height:90vw;
+    height:80vh;
     width:80vw;
     border: solid;
 /*    flex-direction: row-reverse;

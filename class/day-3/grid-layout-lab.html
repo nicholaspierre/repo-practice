@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicholas Pierre</title>
+    <style type="text/css">
+        .gridContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 50px 1fr 1fr 100px;
+
+            border: blue solid;
+            box-sizing: border-box;
+        }
+
+        .gridContainer>.header {
+            background-color: blue;
+            border: blue solid;
+            grid-area: header;
+            border: 1px solid black;
+            grid-template-columns: 200px 100px;
+            /* grid-column-start: 1;
+            grid-column-end: 4; */
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gridContainer">
+        <div class="header">
+            <div>header</div>
+        </div>
+        <div class="maincontent">
+            <div>Maincontent</div>
+        </div>
+        <div class="maincontent2">
+            <div>Maincontent #2</div>
+        </div>
+        <div class="footer">
+            <div>Footer - Copyright 2021 Nicholas Pierre</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

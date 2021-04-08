@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicholas Pierre</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style type="text/css">
+        .road {
+            height: 50%;
+            background: dimgrey;
+            width: 100%;
+        }
+
+        .navBar {
+            position: absolute;
+            /* top: 40px;
+            left: 0px; */
+            animation-name: drive;
+            animation-duration: 5s;
+            animation-fill-mode: backwards;
+            animation-iteration-count: infinite;
+        }
+
+
+        @keyframes drive {
+            from {
+                height: 0px;
+                width: 0px;
+
+            }
+
+            to {
+                height: 20px;
+                width: 80vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navBar">
+        <div><a href="#">Home</a></div>
+        <div><a href="#">Portfolio</a></div>
+        <div id="flexgrowtest"><a href="#">Contact</a></div>
+    </div>
+    <div class="maincontent">
+        <div>Home</div>
+        <div>Search</div>
+        <div id="flexgrowtest"><img class="mario" src="mario.png" height="400px"></div>
+    </div>
+    <div class="copyright">
+        <div>Copyright 2021 Nicholas Pierre</div>
+    </div>
+</body>
+
+</html>
