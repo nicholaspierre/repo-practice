@@ -1,5 +1,5 @@
-var special = "!?*_$%&#@"
-var hasspecialchar = 0
+var special = "@#!?*_$%&"
+var hasSpecialChar = 0
 var hasCapital = 0
 var hasNumber = 0
 var password = "lkasklsaj!@"
@@ -18,7 +18,7 @@ for (x = 0; x < password.length; x++) {
         hasNumber += 1
     }
     if (special.includes(password[x])) {
-        hasspecialchar += 1
+        hasSpecialChar += 1
 
 
     } if (password.length < 6) {
@@ -32,7 +32,7 @@ for (x = 0; x < password.length; x++) {
         else if (hasCapital == 0) {
             message = "must include at least 1 uppercase letter"
         }
-        else if (hasspecialchar == 0) {
+        else if (hasSpecialChar == 0) {
             message = "must include at least 1 special character"
         }
         else {
