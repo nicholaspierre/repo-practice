@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practice with Objects</title>
+
+</head>
+
+<body>
+    <p id="here"></p>
+    <script>
+        let student = {
+            fName: "Simone", lName: "Williamson", math: 80, english: 90, compSci: 80,
+            result: 0,
+
+            fullName: function () {
+
+                return this.fName + this.lName
+            },
+
+            calculateAver: function () {
+                this.result = Math.floor((this.math + this.english + this.compSci) / 3)
+                return this.result;
+            }
+        }
+        document.getElementById("here").innerHTML = "The student " + student.fullName() + " has an average of " + student.calculateAver()
+
+    </script>
+</body>
+
+</html>

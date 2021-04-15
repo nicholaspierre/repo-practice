@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="Functions.js"></script>
+</head>
+
+<body>
+    <h1>Functions</h1>
+
+    <div id="para1"></div>
+    <div id="para2"></div>
+    <div id="para3"></div>
+    <div id="para4"></div>
+
+
+    <script>
+        document.getElementById("para1").innerHTML = findArg(4, 2, 4, 5, 1);
+        document.getElementById("para2").innerHTML = reverseString("Nicholas");
+        document.getElementById("para3").innerHTML = findLongestWord(["Somehow", "Mouse", "We", "Wholesome"]);
+        document.getElementById("para4").innerHTML = filterLongWord(["time", "money", "opportunity", "stability"], 3);
+
+    </script>
+
+
+</body>
+
+</html>

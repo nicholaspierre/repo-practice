@@ -10,14 +10,23 @@
         <p id="para1"></p>
         <p id="para2"></p>
         <p id="para3"></p>
+        <p id="para4"></p>
+        <p id="para5"></p>
+        <p id="para6"></p>
     </div>
 </body>
+<script src="functions.js"></script>
 <script>
     let days = "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday";
     let daysArray = days.split(",");
 
     document.getElementById("para1").innerHTML = daysArray;
     document.getElementById("para2").innerHTML = days;
+    document.getElementById("para3").innerHTML = findSum();
+    document.getElementById("para4").innerHTML = printMessage();
+    document.getElementById("para5").innerHTML = reverseString("Nicholas");
+    document.getElementById("para5").innerHTML = reverseString("Nicholas");
+    
 </script>
 
 </html>
