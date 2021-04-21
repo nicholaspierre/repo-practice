@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Appending Elements</h2>
+    <p id="p"></p>
+ 
+    <div id="div"></div>
+    <script>
+        var text = "Hello World"
+        var myDiv = document.getElementById("div");
+        var para = document.createElement("p")
+        var node = document.createTextNode("Here's a New Paragraph with createTextNode()")
+        para.append("node")
+        // creating new div and p content
+        var myDiv2 = document.createElement("div")
+        myDiv2.id = 'content'
+        myDiv2.innerHTML = "<p>created div2 p element</p>"
+        document.body.appendChild(myDiv2)
+
+        var strong = document.createElement("strong")
+        node = document.createTextNode("This is my strong text");
+        strong.append(node, "this ")
+    </script>
+</body>
+</html>

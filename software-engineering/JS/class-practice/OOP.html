@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+</body>
+<script>
+    let idnum = 0;
+
+    class Student {
+        constructor(fname, lname, address, phone, email) {
+            this.fname = fname;
+            this.lname = lname;
+            this.address = address;
+            this.phone = phone;
+            this.email = email;
+            this.id = ++idnum;
+        }
+
+        getStudentInfo() {
+            var studentInfo = this.fname + " " + this.lname + " " + this.phone;
+            return studentInfo
+        }
+
+        displayStudents() {
+            var studentsDisplay = this.fname + " " + this.lname + " " + this.address + " " + this.phone + " " + this.email + " " + this.avg;
+            return studentsDisplay
+        }
+
+        calcAvg(num1, num2, num3) {
+            this.avg = Math.floor((num1 + num2 + num3) / 3)
+        }
+
+    }
+    student1 = new Student("Nicholas", "Pierre", "123 Main Street", "212-555-5555", "nicholas@email.com")
+    student2 = new Student("Jane", "Smith", "123 Woodlawn Ave", "347-234-8888", "jsmith@email.com")
+    student3 = new Student("James", "Bond", "007 Woodlawn Ave", "347-234-8888", "jsmith@email.com")
+
+    student1.calcAvg(73, 83, 93)
+    document.getElementById("p1").innerHTML = student1.displayStudents()
+    student2.calcAvg(80, 70, 98)
+    document.getElementById("p2").innerHTML = student2.displayStudents()
+    student3.calcAvg(100, 100, 100)
+    document.getElementById("p3").innerHTML = student3.displayStudents()
+
+</script>
+
+</html>
