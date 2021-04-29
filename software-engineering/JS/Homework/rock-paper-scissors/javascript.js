@@ -1,6 +1,7 @@
 let whoWins = "";
 let player1_score = 0;
 let player2_score = 0;
+let rpsRound = 0;
 
 document.onkeydown = function (e) {
     if (e.keyCode === 82) {
@@ -65,6 +66,7 @@ function randomRPS() {
     document.getElementById("item5").innerHTML = whoWins;
     document.getElementById("score_player_1").innerHTML = player1_score;
     document.getElementById("score_player_2").innerHTML = player2_score;
+    document.getElementById("round").innerHTML = ++rpsRound;
 
 }
 
@@ -73,8 +75,10 @@ function resetGame() {
     whoWins = "";
     player1_score = 0;
     player2_score = 0;
+    rpsRound = 0;
     document.getElementById("item5").innerHTML = "&#169; Copyright 2021 Nicholas Pierre";
     document.getElementById("score_player_1").innerHTML = 0;
     document.getElementById("score_player_2").innerHTML = 0;
+    document.getElementById("round").innerHTML = rpsRound;
 
 }
