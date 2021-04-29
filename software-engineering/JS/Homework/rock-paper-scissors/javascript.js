@@ -23,51 +23,61 @@ document.onkeydown = function (e) {
 
 function randomRPS() {
     // var player1RandomNum = Math.floor((Math.random() * 3) + 1)
-    var player2RandomNum = Math.floor((Math.random() * 3) + 1)
-    if (player1RandomNum == 1) {
-        document.getElementById('player1').src = './images/rock.jpeg'
-    } else if (player1RandomNum == 2) {
-        document.getElementById('player1').src = './images/paper.jpeg'
-    } else if (player1RandomNum == 3) {
-        document.getElementById('player1').src = './images/scissors.jpeg'
+    if (rpsRound < 3) {
+
+        var player2RandomNum = Math.floor((Math.random() * 3) + 1)
+        if (player1RandomNum == 1) {
+            document.getElementById('player1').src = './images/rock.jpeg'
+        } else if (player1RandomNum == 2) {
+            document.getElementById('player1').src = './images/paper.jpeg'
+        } else if (player1RandomNum == 3) {
+            document.getElementById('player1').src = './images/scissors.jpeg'
+        }
+
+        if (player2RandomNum == 1) {
+            document.getElementById('player2').src = './images/rock.jpeg'
+        } else if (player2RandomNum == 2) {
+            document.getElementById('player2').src = './images/paper.jpeg'
+        } else if (player2RandomNum == 3) {
+            document.getElementById('player2').src = './images/scissors.jpeg'
+        }
+        //    document.getElementById("item5").innerHTML = "Player1:" + player1RandomNum + " Player2:" + player2RandomNum;
+
+        if (player1RandomNum == player2RandomNum) {
+            whoWins = "Its a TIE! Play Again"
+        } else if (player1RandomNum == 1 && player2RandomNum == 2) {
+            whoWins = "Paper Won!"
+            player2_score++;
+        } else if (player1RandomNum == 2 && player2RandomNum == 1) {
+            whoWins = "Paper Won!"
+            player1_score++;
+        } else if (player1RandomNum == 2 && player2RandomNum == 3) {
+            whoWins = "Scissors Won!"
+            player2_score++
+        } else if (player1RandomNum == 3 && player2RandomNum == 2) {
+            whoWins = "Scissors Won!"
+            player1_score++;
+        } else if (player1RandomNum == 1 && player2RandomNum == 3) {
+            whoWins = "Rock Won!"
+            player1_score++;
+        } else if (player1RandomNum == 3 && player2RandomNum == 1) {
+            whoWins = "Rock Won!"
+            player2_score++;
+        }
+
+        document.getElementById("item5").innerHTML = whoWins;
+        document.getElementById("score_player_1").innerHTML = player1_score;
+        document.getElementById("score_player_2").innerHTML = player2_score;
+        document.getElementById("round").innerHTML = ++rpsRound;
+    } else {
+        if (player1_score == player2_score) {
+            document.getElementById("item5").innerHTML = "Its a TIE"
+        } else if (player1_score < player2_score) {
+            document.getElementById("item5").innerHTML = "Player 2 WON!!!"
+        } else if (player1_score > player2RandomNum) {
+            document.getElementById("item5").innerHTML = "Player 1 WON!!!"
+        }
     }
-
-    if (player2RandomNum == 1) {
-        document.getElementById('player2').src = './images/rock.jpeg'
-    } else if (player2RandomNum == 2) {
-        document.getElementById('player2').src = './images/paper.jpeg'
-    } else if (player2RandomNum == 3) {
-        document.getElementById('player2').src = './images/scissors.jpeg'
-    }
-    //    document.getElementById("item5").innerHTML = "Player1:" + player1RandomNum + " Player2:" + player2RandomNum;
-
-    if (player1RandomNum == player2RandomNum) {
-        whoWins = "Its a TIE! Play Again"
-    } else if (player1RandomNum == 1 && player2RandomNum == 2) {
-        whoWins = "Paper Won!"
-        player2_score++;
-    } else if (player1RandomNum == 2 && player2RandomNum == 1) {
-        whoWins = "Paper Won!"
-        player1_score++;
-    } else if (player1RandomNum == 2 && player2RandomNum == 3) {
-        whoWins = "Scissors Won!"
-        player2_score++
-    } else if (player1RandomNum == 3 && player2RandomNum == 2) {
-        whoWins = "Scissors Won!"
-        player1_score++;
-    } else if (player1RandomNum == 1 && player2RandomNum == 3) {
-        whoWins = "Rock Won!"
-        player1_score++;
-    } else if (player1RandomNum == 3 && player2RandomNum == 1) {
-        whoWins = "Rock Won!"
-        player2_score++;
-    }
-
-    document.getElementById("item5").innerHTML = whoWins;
-    document.getElementById("score_player_1").innerHTML = player1_score;
-    document.getElementById("score_player_2").innerHTML = player2_score;
-    document.getElementById("round").innerHTML = ++rpsRound;
-
 }
 
 function resetGame() {
